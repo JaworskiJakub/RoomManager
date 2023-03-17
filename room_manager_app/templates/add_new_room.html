@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Manager</title>
+</head>
+<body>
+{{message}}
+<form action="" method="POST">
+    {% csrf_token %}
+    <label>
+        Nazwa sali:
+        <input type="text" name="name">
+    </label>
+    <label>
+        Pojemność sali:
+        <input type="number" name="capacity" min="1">
+    </label>
+    <label>
+        Dostępność rzutnika:
+        TAK
+        <input type="checkbox" name="is_projector" value="1">
+        NIE
+        <input type="checkbox" name="is_projector" value="0">
+    </label>
+    <label>
+        <input type="submit" value="Dodaj">
+    </label>
+</form>
+</body>
+</html>
