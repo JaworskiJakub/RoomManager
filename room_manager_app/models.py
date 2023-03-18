@@ -7,4 +7,10 @@ class Room(models.Model):
     is_projector = models.BooleanField()
 
 
-# Create your models here.
+class Reservation(models.Model):
+    date = models.DateField()
+    room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
+    comment = models.TextField()
+
+    class Meta:
+        unique_together = ('date', 'room_id')

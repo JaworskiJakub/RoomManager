@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room reserve</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+    <label>
+        Komentarz:
+        <input type="text" name="comment">
+    </label>
+    <label>
+        Data rezerwacji:
+        <input type="date" name="date" min="{{today}}" max="2099-12-31">
+    </label>
+    <label>
+        <input type="submit" value="Dodaj">
+    </label>
+</form>
+</body>
+</html>
